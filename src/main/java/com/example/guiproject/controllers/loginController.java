@@ -24,6 +24,7 @@ public class loginController {
         String pass = password.getText();
 
 
+
     }
 
     public void clear(){
