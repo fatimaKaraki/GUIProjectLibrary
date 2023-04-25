@@ -1,30 +1,59 @@
 package com.example.guiproject.controllers;
 
+import com.example.guiproject.DAO.StaffDAO;
+import com.example.guiproject.HelloApplication;
+import com.example.guiproject.Models.Staff;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class loginController {
 
     @FXML
-    private Button login;
+    public Button login;
     @FXML
-    private Button clear;
+    public Button clear;
     @FXML
-    private TextField username;
+    public TextField username;
     @FXML
-    private PasswordField password;
+    public PasswordField password;
 
-    public void login(ActionEvent event) throws IOException {
-        String name = username.getText();
-        String pass = password.getText();
+    @FXML
+    public Label test;
 
+    @FXML
+    public void login(ActionEvent event) throws IOException, SQLException {
+        String name;
+        String pass;
+        if(username.getText() != null )
+            name = username.getText();
+        else
+        {
+            name="";
+            test.setText("life is not bambi");
+        }
 
+        if(password.getText()!= null )
+            pass = password.getText();
+        else
+        {
+            pass="";
+            test.setText("life is not bambi");
+        }
 
+        StaffDAO dao = new StaffDAO();
+        Staff staff = dao.authenticate(name,pass);
+        if(staff !=null){
+            HelloApplication app= new HelloApplication();
+            app.home();
+
+        }
     }
 
     public void clear(){
