@@ -3,9 +3,21 @@
 <?import javafx.scene.layout.*?>
 
 
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.homeController">
    <left>
        <fx:include source="menu.fxml" />
    </left>
+
+    <center>
+        <TableView fx:id="rentedBooksTable" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="rentedBookColumn" prefWidth="75.0" text="Book Name"/>
+                <TableColumn fx:id="rentedMemberColumn" prefWidth="75.0" text="Member"/>
+                <TableColumn fx:id="rentedDateColumn" prefWidth="75.0" text="Return Date"/>
+            </columns>
+        </TableView>
+    </center>
 
 </BorderPane>
