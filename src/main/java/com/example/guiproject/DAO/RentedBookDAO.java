@@ -46,10 +46,9 @@ public class RentedBookDAO {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "DELETE FROM rentedBooks WHERE bookId = ? AND memberID = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
-            ResultSet resultSet = statement.executeQuery();
             statement.setInt(1, rentedBook.getBookId());
             statement.setInt(2, rentedBook.getMemberId());
-            statement.executeQuery();
+            statement.execute();
         }
     }
 
@@ -62,8 +61,6 @@ public class RentedBookDAO {
             if (resultSet.next()) {
                 int memberId = resultSet.getInt("memberId");
                 Date returnDate = resultSet.getDate("returnDate");
-
-                String staffPassword = resultSet.getString("password");
                 return new RentedBook(bookId, memberId, returnDate);
             } else {
                 return null;

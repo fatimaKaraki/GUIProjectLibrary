@@ -1,5 +1,10 @@
 package com.example.guiproject.Models;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import java.util.Date;
 
 public class RentedBook {
@@ -37,4 +42,10 @@ public class RentedBook {
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
     }
+
+    public IntegerProperty bookIdProperty() {
+        return new SimpleIntegerProperty(bookId);
+    }
+
+
 }

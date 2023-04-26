@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.homeController">
-   <left>
+
+    <left>
        <fx:include source="menu.fxml" />
    </left>
 
     <center>
-        <TableView fx:id="rentedBooksTable" prefHeight="200.0" prefWidth="200.0">
+        <TableView fx:id="rentedBooksTable" prefHeight="400.0" prefWidth="473.0">
             <columns>
-                <TableColumn fx:id="rentedBookColumn" prefWidth="75.0" text="Book Name"/>
-                <TableColumn fx:id="rentedMemberColumn" prefWidth="75.0" text="Member"/>
-                <TableColumn fx:id="rentedDateColumn" prefWidth="75.0" text="Return Date"/>
+                <TableColumn fx:id="rentedBookColumn" prefWidth="75.0" text="Book Name" />
+                <TableColumn fx:id="rentedMemberColumn" prefWidth="75.0" text="Member" />
+                <TableColumn fx:id="rentedDateColumn" prefWidth="75.0" text="Return Date" />
             </columns>
         </TableView>
     </center>
+   <right>
+      <VBox prefHeight="400.0" prefWidth="203.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Return Rented Book" />
+            <HBox prefHeight="38.0" prefWidth="203.0">
+               <children>
+                  <Label text="Book Id" />
+                  <TextField fx:id="returnedBookId" />
+               </children>
+            </HBox>
+            <Button fx:id="returnBookButton" mnemonicParsing="false" onAction="#returnBookById" text="return " />
+            <Label fx:id="returnResult" text="Label" />
+         </children></VBox>
+   </right>
 
 </BorderPane>
