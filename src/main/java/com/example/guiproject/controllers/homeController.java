@@ -1,5 +1,6 @@
 package com.example.guiproject.controllers;
 
+import com.example.guiproject.DAO.BookDAO;
 import com.example.guiproject.DAO.RentedBookDAO;
 import com.example.guiproject.HelloApplication;
 import com.example.guiproject.Models.RentedBook;
@@ -77,16 +78,18 @@ public class homeController implements Initializable {
 
     public void returnBookById(ActionEvent event) throws SQLException {
         int BookId=  Integer.parseInt(returnedBookId.getText());
-        RentedBookDAO r= new RentedBookDAO();
-        RentedBook b= r.getRentedBookById(BookId);
+        RentedBookDAO rdao= new RentedBookDAO();
+        RentedBook b= rdao.getRentedBookById(BookId);
+        BookDAO bdao = new BookDAO();
         if ( b!= null){
-            r.removeRentedBook(b);
+            rdao.removeRentedBook(b);
+            bdao.returnBook(b.getBookId());
+
             returnResult.setText("Book returned");
         }else{
             returnResult.setText("No rental found");
         }
-        RentedBookDAO rentedBookDAO = new RentedBookDAO();
-        rentedBooks =  FXCollections.observableArrayList(rentedBookDAO.getAllRentedBooks());
+        rentedBooks =  FXCollections.observableArrayList(rdao.getAllRentedBooks());
         begin();
     }
 

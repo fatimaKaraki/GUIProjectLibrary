@@ -35,4 +35,10 @@ public class menuController {
         main.library();
 
     }
+    @FXML
+    public void rent() throws IOException {
+        HelloApplication main= new HelloApplication();
+        main.rentBook();
+
+    }
 }

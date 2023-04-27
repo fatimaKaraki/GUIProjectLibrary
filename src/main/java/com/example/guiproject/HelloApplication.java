@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
     }
 
     public  void Books() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Books.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("books.fxml"));
         Parent root = loader.load();
         stage.setTitle("Books");
         stage.getScene().setRoot(root);
@@ -47,6 +47,14 @@ public class HelloApplication extends Application {
         Parent root = loader.load();
         // Get the stage information
         stage.setTitle("Library");
+        stage.getScene().setRoot(root);
+    }
+
+    public  void rentBook() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("RentBook.fxml"));
+        Parent root = loader.load();
+        // Get the stage information
+        stage.setTitle("Renting A Book");
         stage.getScene().setRoot(root);
     }
 

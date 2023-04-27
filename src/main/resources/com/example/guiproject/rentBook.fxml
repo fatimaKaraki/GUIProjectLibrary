@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.RentBookController">
+    <left>
+        <fx:include source="menu.fxml" />
+    </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Book ID" />
+                  <TextField fx:id="bookId" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Member ID" />
+                  <TextField fx:id="memberID" />
+               </children>
+            </HBox>
+            <Button fx:id="rentButton1"  mnemonicParsing="false" onAction="#rentButton" text="Rent" />
+            <Label fx:id="warning" prefHeight="18.0" prefWidth="95.0" text="warnings" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
