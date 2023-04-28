@@ -1,6 +1,6 @@
 package com.example.guiproject.DAO;
 
-import com.example.guiproject.Models.book;
+import com.example.guiproject.Models.Book;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,47 +8,46 @@ import java.util.ArrayList;
 public class BookDAO {
 
     Connection conn;
-    public void addBook(book b) throws SQLException {
+    public void addBook(Book b) throws SQLException {
 
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "INSERT INTO books (name,category,publisher,status) VALUES (?,?,?,?);";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
-            ResultSet resultSet = statement.executeQuery();
             statement.setString(1, b.getName());
             statement.setString(2, b.getCategory());
-            statement.setString(2, b.getPublisher());
-            statement.setInt(2, b.getStatus());
-            statement.executeQuery();
-        }
-    }
-    public void removeBook(book b) throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
-        String query = "DELETE FROM books WHERE id = ?;";
-        try (PreparedStatement statement = conn.prepareStatement(query)) {
-            statement.setInt(1, b.getId());
+            statement.setString(3, b.getPublisher());
+            statement.setInt(4, b.getStatus());
             statement.execute();
         }
     }
-    public ArrayList<book> getBooks() throws SQLException {
+    public void removeBook(int id) throws SQLException {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+        String query = "DELETE FROM books WHERE id = ?;";
+        try (PreparedStatement statement = conn.prepareStatement(query)) {
+            statement.setInt(1, id);
+            statement.execute();
+        }
+    }
+    public ArrayList<Book> getBooks() throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM books;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
-            ArrayList<book> books = new ArrayList<>();
+            ArrayList<Book> Books = new ArrayList<>();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String category = resultSet.getString("category");
                 String publisher = resultSet.getString("publisher");
                 int status = resultSet.getInt("status");
-                book b = new book(id,name,category,publisher,status);
-                books.add(b);
+                Book b = new Book(id,name,category,publisher,status);
+                Books.add(b);
             }
-            return books;
+            return Books;
         }
 
     }
-    public book getBookById(int i) throws SQLException {
+    public Book getBookById(int i) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM books WHERE id = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
@@ -60,49 +59,70 @@ public class BookDAO {
                 String category = resultSet.getString("category");
                 String publisher = resultSet.getString("publisher");
                 int status = resultSet.getInt("status");
-                return new book(id, name, category,publisher,status);
+                return new Book(id, name, category,publisher,status);
             } else {
                 return null;
             }
         }
     }
-    public ArrayList<book> getBooksByName(String s) throws SQLException {
+    public ArrayList<Book> getBooksByName(String s) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM books WHERE name = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             statement.setString(1,s);
             ResultSet resultSet = statement.executeQuery();
-            ArrayList<book> books = new ArrayList<>();
+            ArrayList<Book> Books = new ArrayList<>();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String category = resultSet.getString("category");
                 String publisher = resultSet.getString("publisher");
                 int status = resultSet.getInt("status");
-                book b = new book(id,name,category,publisher,status);
-                books.add(b);
+                Book b = new Book(id,name,category,publisher,status);
+                Books.add(b);
             }
-            return books;
+            return Books;
         }
 
     }
-    public ArrayList<book> getBooksByCategory(String s) throws SQLException {
+    public ArrayList<Book> getBooksByCategory(String s) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM books WHERE category = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             statement.setString(1,s);
             ResultSet resultSet = statement.executeQuery();
-            ArrayList<book> books = new ArrayList<>();
+            ArrayList<Book> Books = new ArrayList<>();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String category = resultSet.getString("category");
                 String publisher = resultSet.getString("publisher");
                 int status = resultSet.getInt("status");
-                book b = new book(id,name,category,publisher,status);
-                books.add(b);
+                Book b = new Book(id,name,category,publisher,status);
+                Books.add(b);
             }
-            return books;
+            return Books;
+        }
+
+    }
+
+    public ArrayList<Book> getBooksByAuthor(String s) throws SQLException {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+        String query = "SELECT * FROM books WHERE publisher = ?;";
+        try (PreparedStatement statement = conn.prepareStatement(query)) {
+            statement.setString(1,s);
+            ResultSet resultSet = statement.executeQuery();
+            ArrayList<Book> Books = new ArrayList<>();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String category = resultSet.getString("category");
+                String publisher = resultSet.getString("publisher");
+                int status = resultSet.getInt("status");
+                Book b = new Book(id,name,category,publisher,status);
+                Books.add(b);
+            }
+            return Books;
         }
 
     }

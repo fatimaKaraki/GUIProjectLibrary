@@ -4,14 +4,13 @@ import com.example.guiproject.DAO.BookDAO;
 import com.example.guiproject.DAO.MemberDAO;
 import com.example.guiproject.DAO.RentedBookDAO;
 import com.example.guiproject.Models.RentedBook;
-import com.example.guiproject.Models.book;
-import com.example.guiproject.Models.member;
+import com.example.guiproject.Models.Book;
+import com.example.guiproject.Models.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.w3c.dom.events.Event;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -34,8 +33,8 @@ public class RentBookController {
         BookDAO bdao = new BookDAO();
         MemberDAO mdao = new MemberDAO();
         RentedBookDAO rdao = new RentedBookDAO();
-        book b = bdao.getBookById( parseInt(bookId.getText()));
-        member m =  mdao.getMemberById(parseInt(memberId.getText()));
+        Book b = bdao.getBookById( Integer.parseInt(bookId.getText()));
+        Member m =  mdao.getMemberById(Integer.parseInt(memberId.getText()));
         if(b !=null && m !=null  && b.getStatus()==0 ){
 
             LocalDate today = LocalDate.now(); // get the current date
@@ -44,6 +43,9 @@ public class RentBookController {
             RentedBook rb = new RentedBook(b.getId(),m.getId(),sqlDate);
             rdao.addRentedBook(rb);
 
+        }
+        else {
+            warning.setText("Book already rented or wrong ids");
         }
     }
 

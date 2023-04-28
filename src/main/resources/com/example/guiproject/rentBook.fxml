@@ -19,11 +19,11 @@
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Member ID" />
-                  <TextField fx:id="memberID" />
+                  <TextField fx:id="memberId" />
                </children>
             </HBox>
-            <Button fx:id="rentButton1"  mnemonicParsing="false" onAction="#rentButton" text="Rent" />
-            <Label fx:id="warning" prefHeight="18.0" prefWidth="95.0" text="warnings" />
+            <Button fx:id="rentButton1" mnemonicParsing="false" onAction="#rentButton" text="Rent" />
+            <Label fx:id="warning" prefHeight="18.0" prefWidth="95.0" />
          </children>
       </VBox>
    </center>

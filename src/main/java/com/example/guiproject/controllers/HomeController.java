@@ -2,28 +2,22 @@ package com.example.guiproject.controllers;
 
 import com.example.guiproject.DAO.BookDAO;
 import com.example.guiproject.DAO.RentedBookDAO;
-import com.example.guiproject.HelloApplication;
 import com.example.guiproject.Models.RentedBook;
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Date; // or import java.sql.Date;
 import java.util.ResourceBundle;
 
-public class homeController implements Initializable {
+public class HomeController implements Initializable {
 
     @FXML
     public TableView <RentedBook> rentedBooksTable ;

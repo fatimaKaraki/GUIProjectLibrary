@@ -1,20 +1,20 @@
 package com.example.guiproject.Models;
 
-public class member {
+public class Member {
 
     private int id;
     private String phoneNumber;
     private String email;
     private String name;
 
-    public member(int id, String phoneNumber, String email, String name) {
+    public Member(int id, String phoneNumber, String email, String name) {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.name = name;
     }
 
-    public member(String phoneNumber, String email, String name) {
+    public Member(String phoneNumber, String email, String name) {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.name = name;

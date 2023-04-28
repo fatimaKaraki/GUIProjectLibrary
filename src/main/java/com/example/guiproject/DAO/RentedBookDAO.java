@@ -34,11 +34,10 @@ public class RentedBookDAO {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "INSERT INTO rentedBooks VALUES (?,?,?);";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
-            ResultSet resultSet = statement.executeQuery();
             statement.setInt(1, rentedBook.getBookId());
             statement.setInt(2, rentedBook.getMemberId());
             statement.setDate(3, (Date) rentedBook.getReturnDate());
-            statement.executeQuery();
+            statement.execute();
         }
     }
 

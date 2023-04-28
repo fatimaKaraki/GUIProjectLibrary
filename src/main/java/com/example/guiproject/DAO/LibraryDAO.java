@@ -1,14 +1,13 @@
 package com.example.guiproject.DAO;
-import com.example.guiproject.Models.book;
-import com.example.guiproject.Models.library;
-import com.example.guiproject.Models.member;
+import com.example.guiproject.Models.Library;
+import com.example.guiproject.Models.Member;
 
 import java.sql.*;
 import java.util.ArrayList;
 
 public class LibraryDAO {
     Connection conn;
-    public library getLibrary(int i) throws SQLException {
+    public Library getLibrary(int i) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM schedules";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
@@ -17,9 +16,9 @@ public class LibraryDAO {
                 Time opens = resultSet.getTime("opens");
                 Time closes = resultSet.getTime("closes");
                 MemberDAO memberdao = new MemberDAO();
-                ArrayList<member> members = new ArrayList<member>();
-                members = memberdao.getMembers();
-                library l = new library(members,opens,closes);
+                ArrayList<Member> Members = new ArrayList<Member>();
+                Members = memberdao.getMembers();
+                Library l = new Library(Members,opens,closes);
                 return l;
 
             } else {

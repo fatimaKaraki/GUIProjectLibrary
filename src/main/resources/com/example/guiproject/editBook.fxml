@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.EditBooksController">
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+      
+      
+      
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="299.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="240.0">
+                     <children>
+                        <Label text="Remove A Book" />
+                        <HBox prefHeight="100.0" prefWidth="238.0">
+                           <children>
+                              <Label text="book Id : " />
+                              <TextField fx:id="bookId" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#removeBook" text="Remove" />
+                     </children>
+                  </VBox>
+               </children>
+         </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Add a Book" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="name : " />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="category : " />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="author  : " />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#addBook" text="Add" />
+                     </children>
+                  </VBox>
+                  <TextField fx:id="name" layoutX="74.0" layoutY="17.0" />
+                  <TextField fx:id="category" layoutX="71.0" layoutY="66.0" />
+                  <TextField fx:id="publisher" layoutX="71.0" layoutY="123.0" />
+               </children>
+         </AnchorPane>
+      </children>
+   </HBox>
+      <Button fx:id="goBack" layoutX="248.0" layoutY="343.0" mnemonicParsing="false" onAction="#goback" text="Back to Books" />
+   <Label fx:id="result" layoutX="202.0" layoutY="304.0" prefHeight="18.0" prefWidth="168.0" />
+
+
+</AnchorPane>

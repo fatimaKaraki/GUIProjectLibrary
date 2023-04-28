@@ -1,13 +1,13 @@
 package com.example.guiproject.Models;
 
-public class book {
+public class Book {
     private int id;
     private String name;
     private String category;
     private String publisher;
     private int status;
 
-    public book(int id, String name, String category, String publisher, int status) {
+    public Book(int id, String name, String category, String publisher, int status) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -15,7 +15,7 @@ public class book {
         this.status = status;
     }
 
-    public book(String name, String category, String publisher, int status) {
+    public Book(String name, String category, String publisher, int status) {
         this.name = name;
         this.category = category;
         this.publisher = publisher;
