@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.BooksController">
+    <left>
+        <fx:include source="menu.fxml" />
+    </left>
+    <center>
+        <TableView fx:id="booksTable" prefHeight="383.0" prefWidth="303.0">
+            <columns>
+                <TableColumn fx:id="BookIdColumn" prefWidth="50.0" text="Book Id" />
+                <TableColumn fx:id="BookNameColumn" prefWidth="250.0" text="Book Name" />
+                <TableColumn fx:id="BookCatColumn" prefWidth="150.0" text="Category" />
+                <TableColumn fx:id="BookPublisherColumn" prefWidth="150.0" text="Author" />
+                <TableColumn fx:id="BookStatusColumn" prefWidth="50.0" text="Status" />
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox>
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="195.0">
+               <children>
+                   <VBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="14.0" spacing="10">
+                       <Label text="Search book by:" />
+                       <RadioButton fx:id="option1" text="Name" toggleGroup="$Books">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="Books" />
+                        </toggleGroup>
+                       </RadioButton>
+                       <RadioButton fx:id="option2" text="Author" toggleGroup="$Books" />
+                       <RadioButton fx:id="option3" text="Category" toggleGroup="$Books" />
+                   </VBox>
+                  <TextField fx:id="searchInput" layoutX="49.0" layoutY="138.0" prefHeight="20.0" prefWidth="97.0" />
+                  <Button fx:id="bookSearchBtn" layoutX="72.0" layoutY="180.0" mnemonicParsing="false" onAction="#searchBook" text="Search" />
+                  <Label fx:id="searchMsg" layoutX="46.0" layoutY="226.0" prefHeight="18.0" prefWidth="99.0" textAlignment="CENTER" />
+               </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </right>
+   <bottom>
+      <AnchorPane prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="169.0" layoutY="15.0" mnemonicParsing="false" onAction="#editBook" prefHeight="26.0" prefWidth="262.0" text="Edit Books" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

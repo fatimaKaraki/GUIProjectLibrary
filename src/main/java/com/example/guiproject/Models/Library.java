@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import java.sql.Time;
 import java.util.ArrayList;
 
-public class library {
-    private ArrayList<member> members;
+public class Library {
+    private ArrayList<Member> Members;
     private Time openingHour;
     private Time closingHour;
 
-    public library(ArrayList<member> members, Time openingHour, Time closingHour) {
-        this.members = members;
+    public Library(ArrayList<Member> Members, Time openingHour, Time closingHour) {
+        this.Members = Members;
         this.openingHour = openingHour;
         this.closingHour = closingHour;
     }
@@ -35,26 +35,26 @@ public class library {
         notifyMembers();
     }
 
-    public void addMember(member m) throws SQLException {
-        members.add(m);
+    public void addMember(Member m) throws SQLException {
+        Members.add(m);
         MemberDAO dao = new MemberDAO();
         dao.addMember(m);
     }
 
-    public void removeMember(member m) throws SQLException {
-        members.remove(m);
+    public void removeMember(Member m) throws SQLException {
+        Members.remove(m);
         MemberDAO dao = new MemberDAO();
         dao.removeMember(m);
     }
     public void notifyMembers(){
         String s= "The new working hours are from: "+openingHour+ " till: "+ closingHour;
-        for(member m : members){
+        for(Member m : Members){
             m.sendMessage(s);
         }
 
     }
     public void sendMessage(String s) {
-        for (member m : members) {
+        for (Member m : Members) {
             m.sendMessage(s);
         }
     }

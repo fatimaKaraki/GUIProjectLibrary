@@ -1,4 +1,4 @@
 package com.example.guiproject.controllers;
 
-public class membersController {
+public class MembersController {
 }

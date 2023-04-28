@@ -5,10 +5,10 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-public class menuController {
+public class MenuController {
     HelloApplication main;
 
-    public menuController() {
+    public MenuController() {
         this.main = new HelloApplication();
     }
 

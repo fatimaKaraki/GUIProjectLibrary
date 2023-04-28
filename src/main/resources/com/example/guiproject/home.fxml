@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.homeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.HomeController">
 
     <left>
        <fx:include source="menu.fxml" />
@@ -19,7 +19,7 @@
         </TableView>
     </center>
    <right>
-      <VBox prefHeight="400.0" prefWidth="203.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="243.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Return Rented Book" />
             <HBox prefHeight="38.0" prefWidth="203.0">

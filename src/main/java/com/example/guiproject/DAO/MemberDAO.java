@@ -1,7 +1,6 @@
 package com.example.guiproject.DAO;
 
-import com.example.guiproject.Models.book;
-import com.example.guiproject.Models.member;
+import com.example.guiproject.Models.Member;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 public class MemberDAO {
 
     Connection conn;
-    public void addMember(member m) throws SQLException {
+    public void addMember(Member m) throws SQLException {
 
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "INSERT INTO members (name,phoneNumber,email) VALUES (?,?,?);";
@@ -22,7 +21,7 @@ public class MemberDAO {
         }
     }
 
-    public void removeMember(member m) throws SQLException {
+    public void removeMember(Member m) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "DELETE FROM members WHERE id = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
@@ -31,25 +30,25 @@ public class MemberDAO {
         }
     }
 
-    public ArrayList<member> getMembers() throws SQLException {
+    public ArrayList<Member> getMembers() throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "SELECT * FROM members;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
-            ArrayList<member> members = new ArrayList<>();
+            ArrayList<Member> Members = new ArrayList<>();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String phoneNumber = resultSet.getString("phoneNumber");
                 String email = resultSet.getString("email");
-                member m = new member(id,phoneNumber,email,name);
-                members.add(m);
+                Member m = new Member(id,phoneNumber,email,name);
+                Members.add(m);
             }
-            return members;
+            return Members;
         }
 
     }
-    public member getMemberById(int i) throws SQLException {
+    public Member getMemberById(int i) throws SQLException {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
             String query = "SELECT * FROM members WHERE id = ?;";
             try (PreparedStatement statement = conn.prepareStatement(query)) {
@@ -59,7 +58,7 @@ public class MemberDAO {
                     String name = resultSet.getString("name");
                     String phoneNumber = resultSet.getString("phoneNumber");
                     String email = resultSet.getString("email");
-                    return new member(i,phoneNumber,email,name);
+                    return new Member(i,phoneNumber,email,name);
                 } else {
                     return null;
                 }

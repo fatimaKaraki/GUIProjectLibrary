@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage1) throws IOException {
-        stage1.setResizable(false);
+//        stage1.setResizable(false);
         this.stage = stage1;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -51,10 +51,18 @@ public class HelloApplication extends Application {
     }
 
     public  void rentBook() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("RentBook.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("rentBook.fxml"));
         Parent root = loader.load();
         // Get the stage information
         stage.setTitle("Renting A Book");
+        stage.getScene().setRoot(root);
+    }
+
+    public  void editBook() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("editBook.fxml"));
+        Parent root = loader.load();
+        // Get the stage information
+        stage.setTitle("Editing Books");
         stage.getScene().setRoot(root);
     }
 
