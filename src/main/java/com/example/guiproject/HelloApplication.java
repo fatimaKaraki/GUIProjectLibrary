@@ -1,5 +1,6 @@
 package com.example.guiproject;
 
+import com.example.guiproject.Models.Staff;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private static Stage stage;
+    public static Staff user;
 
     @Override
     public void start(Stage stage1) throws IOException {

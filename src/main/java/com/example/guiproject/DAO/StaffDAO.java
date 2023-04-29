@@ -1,9 +1,12 @@
 package com.example.guiproject.DAO;
 
+import com.example.guiproject.HelloApplication;
+import com.example.guiproject.Models.Librarian;
+import com.example.guiproject.Models.Manager;
 import com.example.guiproject.Models.Staff;
 
 import java.sql.*;
-
+import java.util.ArrayList;
 
 
 public class StaffDAO {
@@ -12,7 +15,7 @@ public class StaffDAO {
     public StaffDAO() throws SQLException {
     }
 
-//    public Staff getUserByUsername(String username) throws SQLException {
+    //    public Staff getUserByUsername(String username) throws SQLException {
 //        String query = "SELECT * FROM staff WHERE username = ?";
 //        PreparedStatement stmt = conn.prepareStatement(query);
 //        stmt.setString(1, username);
@@ -37,10 +40,32 @@ public class StaffDAO {
                 int id = resultSet.getInt("id");
                 String staffUsername = resultSet.getString("username");
                 String staffPassword = resultSet.getString("password");
-                return new Staff(id, staffUsername, staffPassword);
+                boolean role = resultSet.getBoolean("isManager");
+                if (role){
+                    HelloApplication.user = new Manager(id, staffUsername, staffPassword);
+                    return HelloApplication.user;
+                }
+                HelloApplication.user = new Librarian(id, staffUsername, staffPassword);
+                return HelloApplication.user;
             } else {
                 return null;
             }
+        }
+    }
+
+    public ArrayList<Librarian> getAllLibrarians() throws SQLException {
+        ArrayList<Librarian> librarians = new ArrayList<>();
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+        String query = "SELECT * FROM staff WHERE isManager = false"; // check syntax
+        try (PreparedStatement statement = conn.prepareStatement(query)) {
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String librarianUsername = resultSet.getString("username");
+                String librarianPassword = resultSet.getString("password");
+                librarians.add(new Librarian(id, librarianUsername, librarianPassword));
+            }
+            return librarians;
         }
     }
 }

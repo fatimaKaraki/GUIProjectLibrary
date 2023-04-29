@@ -21,11 +21,11 @@ public class MemberDAO {
         }
     }
 
-    public void removeMember(Member m) throws SQLException {
+    public void removeMember(int id) throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "DELETE FROM members WHERE id = ?;";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
-            statement.setInt(1, m.getId());
+            statement.setInt(1, id);
             statement.execute();
         }
     }
