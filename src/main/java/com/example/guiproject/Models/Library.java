@@ -44,7 +44,7 @@ public class Library {
     public void removeMember(Member m) throws SQLException {
         Members.remove(m);
         MemberDAO dao = new MemberDAO();
-        dao.removeMember(m);
+        dao.removeMember(m.getId());
     }
     public void notifyMembers(){
         String s= "The new working hours are from: "+openingHour+ " till: "+ closingHour;

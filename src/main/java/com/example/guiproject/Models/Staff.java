@@ -1,14 +1,16 @@
 package com.example.guiproject.Models;
 
-public class Staff {
+public abstract class Staff {
+
+    protected int id;
+    protected String username;
+    protected String password;
+
     public Staff(int id,String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
-    private int id;
-    public String username;
-    private String password;
 
     public String getUsername() {
         return username;
