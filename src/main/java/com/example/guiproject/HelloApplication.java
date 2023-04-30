@@ -37,7 +37,7 @@ public class HelloApplication extends Application {
         stage.getScene().setRoot(root);
     }
     public  void members() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("memebers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("members.fxml"));
         Parent root = loader.load();
         // Get the stage information
         stage.setTitle("Members");
