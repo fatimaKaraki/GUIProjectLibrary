@@ -13,12 +13,12 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="76.0" layoutY="23.0" text="LIBRARY" textFill="#b5b4af">
+            <Label layoutX="121.0" layoutY="27.0" text="LIBRARY" textFill="#b5b4af">
                <font>
                   <Font name="Lucida Fax Regular" size="64.0" />
                </font>
             </Label>
-            <HBox layoutX="12.0" layoutY="177.0" prefHeight="34.0" prefWidth="388.0">
+            <HBox layoutX="56.0" layoutY="174.0" prefHeight="34.0" prefWidth="388.0">
                <children>
                   <Label prefHeight="32.0" prefWidth="116.0" text="Username: " textFill="#b5b4af">
                      <font>
@@ -27,7 +27,7 @@
                   <TextField fx:id="username" prefHeight="26.0" prefWidth="232.0" style="-fx-background-color: #535351;" />
                </children>
             </HBox>
-            <HBox layoutX="12.0" layoutY="237.0" prefHeight="34.0" prefWidth="388.0">
+            <HBox layoutX="56.0" layoutY="233.0" prefHeight="34.0" prefWidth="388.0">
                <children>
                   <Label prefHeight="27.0" prefWidth="117.0" text="Password: " textFill="#b5b4af">
                      <font>
@@ -36,10 +36,10 @@
                   <PasswordField fx:id="password" prefHeight="26.0" prefWidth="231.0" style="-fx-background-color: #535351;" />
                </children>
             </HBox>
-            <Button fx:id="login" layoutX="132.0" layoutY="317.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2A2A2A;" text="LOGIN" textFill="#b5b4af" />
-            <Button fx:id="clear" layoutX="257.0" layoutY="317.0" mnemonicParsing="false" onAction="#clear" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2A2A2A;" text="CLEAR" textFill="#b5b4af" />
+            <Button fx:id="login" layoutX="143.0" layoutY="306.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2A2A2A;" text="LOGIN" textFill="#b5b4af" />
+            <Button fx:id="clear" layoutX="268.0" layoutY="306.0" mnemonicParsing="false" onAction="#clear" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2A2A2A;" text="CLEAR" textFill="#b5b4af" />
          </children>
       </AnchorPane>
-      <Label fx:id="test" prefHeight="18.0" prefWidth="249.0" text="Label" />
+      <Label fx:id="test" prefHeight="18.0" prefWidth="249.0" />
    </children>
 </VBox>

@@ -35,8 +35,9 @@
                        <RadioButton fx:id="option3" text="Category" toggleGroup="$Books" />
                    </VBox>
                   <TextField fx:id="searchInput" layoutX="49.0" layoutY="138.0" prefHeight="20.0" prefWidth="97.0" />
-                  <Button fx:id="bookSearchBtn" layoutX="72.0" layoutY="180.0" mnemonicParsing="false" onAction="#searchBook" text="Search" />
+                  <Button fx:id="bookSearchBtn" layoutX="39.0" layoutY="174.0" mnemonicParsing="false" onAction="#searchBook" text="Search" />
                   <Label fx:id="searchMsg" layoutX="46.0" layoutY="226.0" prefHeight="18.0" prefWidth="99.0" textAlignment="CENTER" />
+                  <Button layoutX="110.0" layoutY="174.0" mnemonicParsing="false" text="Reset" />
                </children>
                 </AnchorPane>
             </children>

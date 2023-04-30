@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="613.0" prefWidth="101.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.MenuController">
+<VBox prefHeight="613.0" prefWidth="147.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.MenuController">
     <children>
         <Button mnemonicParsing="false" onAction="#home" prefHeight="49.0" prefWidth="480.0" style="-fx-background-color: #a0a2ab;" text="Home " textFill="WHITE">
          <font>
@@ -14,17 +14,21 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="123.0" style="-fx-background-color: #a0a2ab;" text="Members" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#Members" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #a0a2ab;" text="Members" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="121.0" style="-fx-background-color: #a0a2ab;" text="Library" textFill="WHITE">
+      <Button mnemonicParsing="false" onAction="#rent" prefHeight="64.0" prefWidth="213.0" style="-fx-background-color: #a0a2ab;" text="Rent A Book" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button mnemonicParsing="false" onAction="#rent" prefHeight="64.0" prefWidth="102.0" style="-fx-background-color: #a0a2ab;" text="Rent A Book" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#library" prefHeight="58.0" prefWidth="158.0" style="-fx-background-color: #a0a2ab;" text="Library" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
+        <Button mnemonicParsing="false" onAction="#logout" prefHeight="58.0" prefWidth="158.0" style="-fx-background-color: #FF6347;" text="Logout" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
     </children>
 </VBox>

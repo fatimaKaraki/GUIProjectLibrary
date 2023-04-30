@@ -54,9 +54,15 @@ public class LoginController {
             app.home();
 
         }
+        else{
+            test.setText("Wrong credentials!");
+        }
     }
 
     public void clear(){
+        username.setText("");
+        password.setText("");
+
 
     }
 }

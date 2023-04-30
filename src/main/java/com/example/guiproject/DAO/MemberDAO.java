@@ -13,11 +13,10 @@ public class MemberDAO {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         String query = "INSERT INTO members (name,phoneNumber,email) VALUES (?,?,?);";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
-            ResultSet resultSet = statement.executeQuery();
             statement.setString(1, m.getName());
             statement.setString(2, m.getPhoneNumber());
-            statement.setString(2, m.getEmail());
-            statement.executeQuery();
+            statement.setString(3, m.getEmail());
+            statement.execute();
         }
     }
 
@@ -64,5 +63,24 @@ public class MemberDAO {
                 }
             }
         }
+
+    public ArrayList<Member> getMemberByName(String n) throws SQLException {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+        String query = "SELECT * FROM members WHERE name = ?;";
+        try (PreparedStatement statement = conn.prepareStatement(query)) {
+            statement.setString(1, n);
+            ResultSet resultSet = statement.executeQuery();
+            ArrayList<Member> members = new ArrayList<>();
+            while (resultSet.next()) {
+                int id= resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String phoneNumber = resultSet.getString("phoneNumber");
+                String email = resultSet.getString("email");
+                members.add(new Member(id,phoneNumber,email,name));
+            }
+            return members;
+        }
+    }
+
 
 }
