@@ -1,5 +1,6 @@
 package com.example.guiproject;
 
+import com.example.guiproject.Models.Manager;
 import com.example.guiproject.Models.Staff;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,28 +20,28 @@ public class HelloApplication extends Application {
         this.stage = stage1;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage1.setTitle("Hello!");
+        stage1.setTitle("Welcome!");
         stage1.setScene(scene);
         stage1.show();
     }
     public  void home() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
         Parent root = loader.load();
-        stage.setTitle("home");
+        stage.setTitle("home  "+ user.getUsername());
         stage.getScene().setRoot(root);
     }
 
     public  void Books() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("books.fxml"));
         Parent root = loader.load();
-        stage.setTitle("Books");
+        stage.setTitle("Books   " +user.getUsername());
         stage.getScene().setRoot(root);
     }
     public  void members() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("members.fxml"));
         Parent root = loader.load();
         // Get the stage information
-        stage.setTitle("Members");
+        stage.setTitle("Members  " +user.getUsername());
         stage.getScene().setRoot(root);
     }
 
@@ -48,7 +49,7 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("library.fxml"));
         Parent root = loader.load();
         // Get the stage information
-        stage.setTitle("Library");
+        stage.setTitle("Library   "+user.getUsername());
         stage.getScene().setRoot(root);
     }
 
@@ -56,7 +57,7 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("rentBook.fxml"));
         Parent root = loader.load();
         // Get the stage information
-        stage.setTitle("Renting A Book");
+        stage.setTitle("Renting A Book   "+user.getUsername());
         stage.getScene().setRoot(root);
     }
 
@@ -64,9 +65,20 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("editBook.fxml"));
         Parent root = loader.load();
         // Get the stage information
-        stage.setTitle("Editing Books");
+        stage.setTitle("Editing Books   "+user.getUsername());
         stage.getScene().setRoot(root);
     }
+
+    public  void logout() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+        Parent root = loader.load();
+        // Get the stage information
+        stage.setTitle("Welcome!");
+        stage.getScene().setRoot(root);
+        user=null;
+    }
+
+
 
 
 

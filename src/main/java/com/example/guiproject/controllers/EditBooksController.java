@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class EditBooksController {
 
@@ -32,18 +33,28 @@ public class EditBooksController {
 
     @FXML
     public void addBook(ActionEvent event) throws SQLException {
-        Book b = new Book(name.getText(),category.getText(),publisher.getText(),0);
-        BookDAO bookdao = new BookDAO();
-        bookdao.addBook(b);
-        result.setText("Book was successfully added");
-
+        if(!Objects.equals(name.getText(), "") && !Objects.equals(category.getText(), "") && !Objects.equals(publisher.getText(), "")) {
+            Book b = new Book(name.getText(), category.getText(), publisher.getText(), 0);
+            BookDAO bookdao = new BookDAO();
+            bookdao.addBook(b);
+            result.setText("Book was successfully added");
+            name.setText("");
+            category.setText("");
+            publisher.setText("");
+        }else {
+            result.setText("Fill out all the fields!");
+        }
     }
 
     @FXML
     public void removeBook(ActionEvent event) throws SQLException {
         BookDAO bookdao = new BookDAO();
-        bookdao.removeBook(Integer.parseInt(bookId.getText()));
-        result.setText("Book was successfully deleted");
+        if(bookdao.removeBook(Integer.parseInt(bookId.getText()))){
+            result.setText("Book was successfully deleted");
+        }else {
+            result.setText("Book was not found");
+        }
+        bookId.setText("");
     }
 
     public void goback(ActionEvent event) throws IOException {

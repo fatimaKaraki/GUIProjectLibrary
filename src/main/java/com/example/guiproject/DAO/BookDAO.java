@@ -20,13 +20,17 @@ public class BookDAO {
             statement.execute();
         }
     }
-    public void removeBook(int id) throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
-        String query = "DELETE FROM books WHERE id = ?;";
-        try (PreparedStatement statement = conn.prepareStatement(query)) {
-            statement.setInt(1, id);
-            statement.execute();
+    public boolean removeBook(int id) throws SQLException {
+        if(this.getBookById(id)!=null) {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
+            String query = "DELETE FROM books WHERE id = ?;";
+            try (PreparedStatement statement = conn.prepareStatement(query)) {
+                statement.setInt(1, id);
+                statement.execute();
+                return true;
+            }
         }
+        return false;
     }
     public ArrayList<Book> getBooks() throws SQLException {
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");

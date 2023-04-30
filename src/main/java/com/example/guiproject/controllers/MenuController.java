@@ -31,14 +31,25 @@ public class MenuController {
 
     @FXML
     public void library() throws IOException {
-        HelloApplication main= new HelloApplication();
+       // HelloApplication main= new HelloApplication();
         main.library();
 
     }
     @FXML
     public void rent() throws IOException {
-        HelloApplication main= new HelloApplication();
+       // HelloApplication main= new HelloApplication();
         main.rentBook();
 
     }
+    @FXML
+    public void logout() throws IOException {
+       // HelloApplication main= new HelloApplication();
+        main.logout();
+
+    }
+
+
+
+
+
 }

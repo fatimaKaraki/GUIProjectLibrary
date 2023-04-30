@@ -1,6 +1,7 @@
 package com.example.guiproject.controllers;
 
 import com.example.guiproject.DAO.MemberDAO;
+import com.example.guiproject.Models.Book;
 import com.example.guiproject.Models.Member;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -15,22 +16,24 @@ import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MembersController implements Initializable {
 
     @FXML
-    private TextField MemberDeleteInput;
+    public  TextField MemberDeleteInput;
 
     @FXML
-    private TextField MemberEmailInput;
+    public TextField MemberEmailInput;
 
     @FXML
-    private TextField MemberPhoneInput;
+    public TextField MemberPhoneInput;
 
     @FXML
-    private TextField MemberNameInput;
+    public TextField MemberNameInput;
 
     @FXML
     public TableColumn<Member, String> MemberEmailColumn;
@@ -44,19 +47,30 @@ public class MembersController implements Initializable {
     @FXML
     public TableColumn<Member,String> MemberPhoneColumn;
 
+
     @FXML
     public TableView<Member> membersTable;
+
+    @FXML
+    public TextField searchButton;
+    @FXML
+    public TextField memberNameSearch;
+
+
     ObservableList<Member> members;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        show();
+        MemberDAO memberDAO = new MemberDAO();
+        try {
+            show(memberDAO.getMembers());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void show(){
-        try {
-            MemberDAO memberDAO = new MemberDAO();
-            members =  FXCollections.observableArrayList(memberDAO.getMembers());
+    public void show(ArrayList<Member> givenMembers){
+            members =  FXCollections.observableArrayList(givenMembers);
             //casting may cause some errors
             // pay attention to this
             membersTable.setItems(members);
@@ -80,25 +94,46 @@ public class MembersController implements Initializable {
                 ObjectProperty<String> MemberEmailProperty = new SimpleObjectProperty<>(memberEmail);
                 return MemberEmailProperty;
             });
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public void addMember(ActionEvent event) throws SQLException {
-        MemberDAO memberDAO = new MemberDAO();
-        String name = MemberNameInput.getText();
-        String phone = MemberPhoneInput.getText();
-        String email = MemberEmailInput.getText();
-        Member m = new Member(phone,email,name);
-        memberDAO.addMember(m);
+        if(!Objects.equals(MemberNameInput.getText(), "") && !Objects.equals(MemberPhoneInput.getText(), "") && !Objects.equals(MemberEmailInput.getText(),  "") ) {
+            MemberDAO memberDAO = new MemberDAO();
+            String name = MemberNameInput.getText();
+            String phone = MemberPhoneInput.getText();
+            String email = MemberEmailInput.getText();
+            Member m = new Member(phone, email, name);
+            memberDAO.addMember(m);
+            this.show(memberDAO.getMembers());
+            this.clear();
+        }
+
     }
+    public  void  clear(){
+        MemberNameInput.setText("");
+        MemberPhoneInput.setText("");
+        MemberEmailInput.setText("");
+    }
+
 
     public void removeMember(ActionEvent event) throws SQLException {
         MemberDAO memberDAO = new MemberDAO();
         int id = Integer.parseInt(MemberDeleteInput.getText());
         memberDAO.removeMember(id);
+        this.show(memberDAO.getMembers());
+        MemberDeleteInput.setText("");
     }
 
+    public void searchMember() throws SQLException {
+        ArrayList<Member> members = new ArrayList<>();
+        MemberDAO memberDAO = new MemberDAO();
+        try {
+            members.add(memberDAO.getMemberById(Integer.parseInt(memberNameSearch.getText())));
+            show(members);
+        } catch (Exception e) {
+            members.addAll(memberDAO.getMemberByName(memberNameSearch.getText()));
+            show(members);
+        }
+    }
 
 }
