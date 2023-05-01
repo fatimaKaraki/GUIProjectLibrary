@@ -29,6 +29,43 @@ The database for this project was implemented using PHPMyAdmin and consists of 5
 To handle database operations, DAO (Data Access Object) classes were created for each model. These DAO classes implement all necessary queries for data manipulation, from insertion to deletion and updates. You can find these DAO classes in the DAO package of the project.
 
 ## Some Snippets and Explanation 
+### login page:
+
+
+<img src="">
+
+### Home Page:
+
+
+<img src=""> 
+
+### Members:
+
+
+<img src=""> 
+
+### Books:
+
+
+<img src=""> 
+
+### EditBooks 
+<img src=""> 
+
+### Library:
+
+
+for Staff 
+<img src=""> 
+for Manager
+<img src=""> 
+
+### Rent a Book Page:
+
+
+<img src=""> 
+
+
 
 
 
@@ -37,11 +74,11 @@ the following project wa designed and implemented by:
 
 Fatima Karaki (103717) 
 
-Fadel Bayloon (96879)
+Fadel Bayloun (96879)
 
 Issa Sabeh (100529) 
 
-Hussien Maatouk ()
+Hussien Maatouk (107147)
 
 ## Contact Information 
 For any questions please contact one of the following: 
@@ -51,6 +88,8 @@ fatima karaki karakifatima29@gmail.com
 Issa Sabeh Issasab2204@gmail.com 
 
 Fadel Bayloon Fadel.bayloun12@gmail.com
+
+Hussien Maatouk Hmaatouk1998@gmail.com 
 
 
 
