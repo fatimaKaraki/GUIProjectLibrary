@@ -29,28 +29,40 @@ The database for this project was implemented using PHPMyAdmin and consists of 5
 To handle database operations, DAO (Data Access Object) classes were created for each model. These DAO classes implement all necessary queries for data manipulation, from insertion to deletion and updates. You can find these DAO classes in the DAO package of the project.
 
 ## Some Snippets and Explanation 
-login page 
+### login page:
+
+
 <img src="">
 
-Home Page 
+### Home Page:
+
+
 <img src=""> 
 
-Members 
+### Members:
+
+
 <img src=""> 
 
-Books 
+### Books:
+
+
 <img src=""> 
 
-EditBooks 
+### EditBooks 
 <img src=""> 
 
-Library 
+### Library:
+
+
 for Staff 
 <img src=""> 
 for Manager
 <img src=""> 
 
-Rent a Book Page 
+### Rent a Book Page:
+
+
 <img src=""> 
 
 
