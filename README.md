@@ -10,7 +10,7 @@ Staff, who are logged in to the application, are able to view a list of rented b
 The library contains a notification feature, which allows managers to send notifications to staff. Managers can also add or remove staff members, as well as promote staff members to managers or demote a manager to a regular librarian.
 
 
-## Designe Patterns and implementation:  
+## Design Patterns and implementation:  
 
 The project was designed to incorporate three distinct design patterns.
 
@@ -31,6 +31,17 @@ To handle database operations, DAO (Data Access Object) classes were created for
 ## Some Snippets and Explanation 
 
 
- 
+## Contributions
+the following project wa designed and implemented by 
+Fatima Karaki (103717) 
+Fadel Bayloon (96879)
+Issa Sabeh (100529) 
+Hussien Maatouk ()
+
+## Contact Information 
+For any questions please contact one of the following 
+fatima karaki karakifatima29@gmail.com 
+Issa Sabeh Issasab2204@gmail.com 
+Fadel Bayloon Fadel.bayloun12@gmail.com
 
 
