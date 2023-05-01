@@ -21,7 +21,7 @@ public class Manager extends Staff implements Observable{
         librarians.remove(lib);
     }
 
-    public void notifyAllMembers (Notification notification) throws SQLException {
+    public void notifyAllStaff (Notification notification) throws SQLException {
         for (Librarian b : librarians) {
             b.getNotified(notification);
         }

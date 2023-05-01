@@ -23,7 +23,10 @@
          <font>
             <Font size="23.0" />
          </font></Label>
-      <Label fx:id="msgResult" layoutX="130.0" layoutY="368.0" text="" />
+      <Label fx:id="msgResult" alignment="CENTER" layoutX="32.0" layoutY="417.0" prefHeight="64.0" prefWidth="200.0" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <Button fx:id="addStaffBtn" layoutX="298.0" layoutY="165.0" mnemonicParsing="false" onAction="#addStaff" style="-fx-background-color: #2196f3;" text="Add " textFill="WHITE" />
       <TextField fx:id="addUsernameInput" layoutX="298.0" layoutY="52.0" promptText="Username" />
       <Label layoutX="298.0" layoutY="24.0" text="Add Staff:" textFill="WHITE">
@@ -54,7 +57,7 @@
       </Label>
       <PasswordField fx:id="addPassInput" layoutX="298.0" layoutY="87.0" promptText="Password" />
       <PasswordField fx:id="addPassRepeatInput" layoutX="298.0" layoutY="125.0" promptText="Repeat Password" />
-      <Label fx:id="staffResult" alignment="CENTER" layoutX="91.0" layoutY="545.0" prefHeight="22.0" prefWidth="318.0" textFill="WHITE">
+      <Label fx:id="staffResult" alignment="CENTER" layoutX="119.0" layoutY="538.0" prefHeight="34.0" prefWidth="318.0" textFill="WHITE" wrapText="true">
          <font>
             <Font size="17.0" />
          </font></Label>

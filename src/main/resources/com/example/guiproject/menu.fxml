@@ -7,27 +7,27 @@
 
 <VBox prefHeight="613.0" prefWidth="147.0" style="-fx-background-color: #2d3447;" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.MenuController">
     <children>
-        <Button mnemonicParsing="false" onAction="#home" prefHeight="49.0" prefWidth="480.0" style="-fx-background-color: #a0a2ab;" text="Home " textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#home" prefHeight="100.0" prefWidth="147.0" style="-fx-background-color: #a0a2ab;" text="Home " textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" onAction="#Books" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a0a2ab;" text="Books" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#Books" prefHeight="100.0" prefWidth="147.0" style="-fx-background-color: grey;" text="Books" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" onAction="#Members" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #a0a2ab;" text="Members" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#Members" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #a0a2ab;" text="Members" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button mnemonicParsing="false" onAction="#rent" prefHeight="64.0" prefWidth="213.0" style="-fx-background-color: #a0a2ab;" text="Rent A Book" textFill="WHITE">
+      <Button mnemonicParsing="false" onAction="#rent" prefHeight="100.0" prefWidth="213.0" style="-fx-background-color: grey;" text="Rent A Book" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" onAction="#library" prefHeight="58.0" prefWidth="158.0" style="-fx-background-color: #a0a2ab;" text="Library" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#library" prefHeight="100.0" prefWidth="158.0" style="-fx-background-color: #a0a2ab;" text="Library" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-        <Button mnemonicParsing="false" onAction="#logout" prefHeight="58.0" prefWidth="158.0" style="-fx-background-color: #FF6347;" text="Logout" textFill="WHITE">
+        <Button mnemonicParsing="false" onAction="#logout" prefHeight="100.0" prefWidth="147.0" style="-fx-background-color: #FF6347;" text="Logout" textFill="WHITE">
             <font>
                 <Font size="15.0" />
             </font></Button>

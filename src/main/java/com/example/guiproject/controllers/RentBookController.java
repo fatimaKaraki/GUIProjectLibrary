@@ -54,6 +54,8 @@ public class RentBookController {
             rdao.addRentedBook(rb);
             BookDAO bookDAO= new BookDAO();
             bookDAO.rentBook(b.getId());
+            warning.setText("Book Rented Successfully");
+
 
         }
         else {

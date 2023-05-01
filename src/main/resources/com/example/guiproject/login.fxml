@@ -10,41 +10,41 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.LoginController">
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.LoginController">
    <right>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="424.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="username" layoutX="46.0" layoutY="198.0" prefHeight="32.0" prefWidth="275.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #2d3447; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="username" layoutX="5.0" layoutY="193.0" prefHeight="32.0" prefWidth="275.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #2d3447; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="17.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="password" layoutX="46.0" layoutY="269.0" prefHeight="34.0" prefWidth="275.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #2d3447; -fx-border-width: 0px 0px 2px 0px;">
+            <PasswordField fx:id="password" layoutX="5.0" layoutY="264.0" prefHeight="34.0" prefWidth="275.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #2d3447; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="17.0" />
                </font>
             </PasswordField>
-            <Button fx:id="login" layoutX="62.0" layoutY="358.0" mnemonicParsing="false" onAction="#login" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #2196f3;" text="LOGIN" textFill="WHITE">
+            <Button fx:id="login" layoutX="21.0" layoutY="353.0" mnemonicParsing="false" onAction="#login" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #2196f3;" text="LOGIN" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="clear" layoutX="187.0" layoutY="358.0" mnemonicParsing="false" onAction="#clear" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #2d3447;" text="CLEAR" textFill="WHITE">
+            <Button fx:id="clear" layoutX="146.0" layoutY="353.0" mnemonicParsing="false" onAction="#clear" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #2d3447;" text="CLEAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label fx:id="test" layoutX="51.0" layoutY="426.0" prefHeight="41.0" prefWidth="249.0" textAlignment="CENTER" textFill="RED">
+            <Label fx:id="test" layoutX="10.0" layoutY="421.0" prefHeight="41.0" prefWidth="249.0" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="119.0" layoutY="121.0" text="User Login" textFill="#2d3447">
+            <Label layoutX="78.0" layoutY="116.0" text="User Login" textFill="#2d3447">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <ImageView fitHeight="126.0" fitWidth="78.0" layoutX="148.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="126.0" fitWidth="78.0" layoutX="107.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/multiple-users-silhouette%20(1).png" />
                </image>
@@ -53,14 +53,14 @@
       </AnchorPane>
    </right>
    <left>
-      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #2d3447;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #2d3447;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="48.0" layoutY="261.0" prefHeight="207.0" prefWidth="254.0" text="Library Managment System" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label layoutX="473.0" layoutY="216.0" prefHeight="326.0" prefWidth="372.0" text="Library Managment System" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="System Bold" size="40.0" />
+                  <Font name="System Bold" size="63.0" />
                </font>
             </Label>
-            <ImageView fitHeight="184.0" fitWidth="191.0" layoutX="83.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="386.0" fitWidth="489.0" layoutX="71.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/stack-of-books.png" />
                </image>

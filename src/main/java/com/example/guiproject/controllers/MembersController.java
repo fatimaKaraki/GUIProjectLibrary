@@ -139,6 +139,7 @@ public class MembersController implements Initializable {
             Integer.parseInt(memberNameSearch.getText());
             givenMembers.add(memberDAO.getMemberById(Integer.parseInt(memberNameSearch.getText())));
             show(givenMembers);
+            memberNameSearch.setText("");
         } catch (Exception e) {
                 givenMembers.addAll(memberDAO.getMemberByName(memberNameSearch.getText()));
                 show(givenMembers);

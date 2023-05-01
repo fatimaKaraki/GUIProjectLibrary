@@ -51,7 +51,7 @@ public class AddNotificationController implements Initializable {
             Notification notification = new Notification(msgTitle.getText(), msgBody.getText());
             if (HelloApplication.user instanceof Manager) {
                 Manager man = (Manager) HelloApplication.user;
-                man.notifyAllMembers(notification);
+                man.notifyAllStaff(notification);
             }
             msgTitle.setText("");
             msgBody.setText("");
