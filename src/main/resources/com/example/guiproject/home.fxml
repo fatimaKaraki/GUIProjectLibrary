@@ -29,7 +29,7 @@
                </children>
             </HBox>
             <Button fx:id="returnBookButton" mnemonicParsing="false" onAction="#returnBookById" text="return " />
-            <Label fx:id="returnResult" text="Label" />
+            <Label fx:id="returnResult" />
          </children></VBox>
    </right>
 

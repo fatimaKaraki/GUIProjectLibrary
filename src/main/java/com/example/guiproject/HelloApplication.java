@@ -77,7 +77,9 @@ public class HelloApplication extends Application {
         stage.getScene().setRoot(root);
         user=null;
     }
-
+    public  FXMLLoader getLoader(){
+        return  new FXMLLoader(getClass().getResource( "addNotification.fxml"));
+    }
 
 
 

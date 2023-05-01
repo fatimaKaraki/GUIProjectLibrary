@@ -56,6 +56,9 @@ public class Member {
 
     }
 
+    public Member() {
+    }
+
     public void sendMessage(String s){
         // the code that needs to be fixed
     }

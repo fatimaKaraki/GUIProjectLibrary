@@ -24,6 +24,15 @@ public abstract class Staff {
         return password;
     }
 
+    public Staff(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }

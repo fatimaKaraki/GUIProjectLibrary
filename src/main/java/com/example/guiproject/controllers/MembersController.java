@@ -70,30 +70,35 @@ public class MembersController implements Initializable {
     }
 
     public void show(ArrayList<Member> givenMembers){
-            members =  FXCollections.observableArrayList(givenMembers);
-            //casting may cause some errors
-            // pay attention to this
-            membersTable.setItems(members);
-            MemberIdColumn.setCellValueFactory(cellData -> {
-                Integer memberId = cellData.getValue().getId();
-                ObjectProperty<Integer> MemberIdProperty = new SimpleObjectProperty<>(memberId);
-                return MemberIdProperty;
-            });
-            MemberNameColumn.setCellValueFactory(cellData -> {
-                String memberName = cellData.getValue().getName();
-                ObjectProperty<String> MemberNameProperty = new SimpleObjectProperty<>(memberName);
-                return MemberNameProperty;
-            });
-            MemberPhoneColumn.setCellValueFactory(cellData -> {
-                String memberPhone = cellData.getValue().getPhoneNumber();
-                ObjectProperty<String> MemberPhoneProperty = new SimpleObjectProperty<>(memberPhone);
-                return MemberPhoneProperty;
-            });
-            MemberEmailColumn.setCellValueFactory(cellData -> {
-                String memberEmail = cellData.getValue().getEmail();
-                ObjectProperty<String> MemberEmailProperty = new SimpleObjectProperty<>(memberEmail);
-                return MemberEmailProperty;
-            });
+
+              members = FXCollections.observableArrayList(givenMembers);
+              membersTable.setItems(members);
+
+              MemberIdColumn.setCellValueFactory(cellData -> {
+                  Integer memberId = cellData.getValue().getId();
+                  ObjectProperty<Integer> MemberIdProperty = new SimpleObjectProperty<>(memberId);
+                  return MemberIdProperty;
+              });
+              MemberNameColumn.setCellValueFactory(cellData -> {
+                  String memberName = cellData.getValue().getName();
+                  ObjectProperty<String> MemberNameProperty = new SimpleObjectProperty<>(memberName);
+                  return MemberNameProperty;
+              });
+              MemberPhoneColumn.setCellValueFactory(cellData -> {
+                  String memberPhone = cellData.getValue().getPhoneNumber();
+                  ObjectProperty<String> MemberPhoneProperty = new SimpleObjectProperty<>(memberPhone);
+                  return MemberPhoneProperty;
+              });
+              MemberEmailColumn.setCellValueFactory(cellData -> {
+                  String memberEmail = cellData.getValue().getEmail();
+                  ObjectProperty<String> MemberEmailProperty = new SimpleObjectProperty<>(memberEmail);
+                  return MemberEmailProperty;
+              });
+
+
+
+
+
     }
 
     public void addMember(ActionEvent event) throws SQLException {
@@ -125,15 +130,19 @@ public class MembersController implements Initializable {
     }
 
     public void searchMember() throws SQLException {
-        ArrayList<Member> members = new ArrayList<>();
+        ArrayList<Member> givenMembers = new ArrayList<>();
         MemberDAO memberDAO = new MemberDAO();
         try {
-            members.add(memberDAO.getMemberById(Integer.parseInt(memberNameSearch.getText())));
-            show(members);
+            Integer.parseInt(memberNameSearch.getText());
+            givenMembers.add(memberDAO.getMemberById(Integer.parseInt(memberNameSearch.getText())));
+            show(givenMembers);
         } catch (Exception e) {
-            members.addAll(memberDAO.getMemberByName(memberNameSearch.getText()));
-            show(members);
+                givenMembers.addAll(memberDAO.getMemberByName(memberNameSearch.getText()));
+                show(givenMembers);
+
         }
+
+
     }
 
 }
