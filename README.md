@@ -47,7 +47,7 @@ the following project wa designed and implemented by:
 
 Fatima Karaki (103717) 
 
-Fadel Bayloon (96879)
+Fadel Bayloun (96879)
 
 Issa Sabeh (100529) 
 
@@ -61,6 +61,8 @@ fatima karaki karakifatima29@gmail.com
 Issa Sabeh Issasab2204@gmail.com 
 
 Fadel Bayloon Fadel.bayloun12@gmail.com
+
+Hussien Maatouk Hmaatouk1998@gmail.com 
 
 
 
