@@ -6,28 +6,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.EditBooksController">
-      <TextField fx:id="bookId" layoutX="397.0" layoutY="213.0" prefHeight="37.0" prefWidth="161.0" promptText="Enter book ID" />
-      <Button layoutX="434.0" layoutY="271.0" mnemonicParsing="false" onAction="#removeBook" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FF6347;" text="Remove" textFill="WHITE" />
-      <Label alignment="CENTER" layoutX="122.0" layoutY="135.0" prefHeight="37.0" prefWidth="200.0" text="Add a book" textAlignment="CENTER" textFill="WHITE">
+<AnchorPane prefHeight="638.0" prefWidth="662.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.EditBooksController">
+      <TextField fx:id="bookId" layoutX="61.0" layoutY="370.0" prefHeight="37.0" prefWidth="161.0" promptText="Enter book ID" />
+      <Button layoutX="61.0" layoutY="424.0" mnemonicParsing="false" onAction="#removeBook" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FF6347;" text="Remove" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="41.0" layoutY="60.0" prefHeight="37.0" prefWidth="200.0" text="Add a book" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font size="30.0" />
       </font>
    </Label>
-      <TextField fx:id="name" layoutX="140.0" layoutY="185.0" prefHeight="37.0" prefWidth="161.0" promptText="Books Name" />
-      <TextField fx:id="category" layoutX="141.0" layoutY="233.0" prefHeight="37.0" prefWidth="161.0" promptText="Category" />
-      <TextField fx:id="publisher" layoutX="141.0" layoutY="283.0" prefHeight="37.0" prefWidth="161.0" promptText="Author" />
-      <Button fx:id="goBack" layoutX="565.0" layoutY="425.0" mnemonicParsing="false" onAction="#goback" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: #2196f3;" text="Back to Books" textFill="WHITE" />
-   <Label fx:id="result" alignment="CENTER" layoutX="188.0" layoutY="425.0" prefHeight="37.0" prefWidth="325.0" textFill="WHITE">
+      <TextField fx:id="name" layoutX="60.0" layoutY="117.0" prefHeight="37.0" prefWidth="161.0" promptText="Books Name" />
+      <TextField fx:id="category" layoutX="61.0" layoutY="165.0" prefHeight="37.0" prefWidth="161.0" promptText="Category" />
+      <TextField fx:id="publisher" layoutX="61.0" layoutY="215.0" prefHeight="37.0" prefWidth="161.0" promptText="Author" />
+      <Button fx:id="goBack" layoutX="61.0" layoutY="562.0" mnemonicParsing="false" onAction="#goback" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: #2196f3;" text="Back to Books" textFill="WHITE" />
+   <Label fx:id="result" alignment="CENTER" layoutX="203.0" layoutY="341.0" prefHeight="37.0" prefWidth="325.0" textFill="WHITE">
       <font>
          <Font size="18.0" />
-      </font></Label>
-      <Button layoutX="185.0" layoutY="340.0" mnemonicParsing="false" onAction="#addBook" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #2196f3;" text="Add" textFill="WHITE" />
-   <Label alignment="CENTER" layoutX="378.0" layoutY="158.0" prefHeight="37.0" prefWidth="200.0" text="Remove a book" textAlignment="CENTER" textFill="WHITE">
+      </font>
+   </Label>
+      <Button layoutX="60.0" layoutY="270.0" mnemonicParsing="false" onAction="#addBook" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #2196f3;" text="Add" textFill="WHITE" />
+   <Label alignment="CENTER" layoutX="41.0" layoutY="318.0" prefHeight="46.0" prefWidth="241.0" text="Remove a book" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font size="30.0" />
       </font>
    </Label>
 
-
-</AnchorPane>
+                  
+                  </AnchorPane>

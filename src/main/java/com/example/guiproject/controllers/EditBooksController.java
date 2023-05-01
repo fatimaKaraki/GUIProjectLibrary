@@ -48,13 +48,20 @@ public class EditBooksController {
 
     @FXML
     public void removeBook(ActionEvent event) throws SQLException {
-        BookDAO bookdao = new BookDAO();
-        if(bookdao.removeBook(Integer.parseInt(bookId.getText()))){
-            result.setText("Book was successfully deleted");
-        }else {
-            result.setText("Book was not found");
+        if(!Objects.equals(bookId.getText(), "")){
+            BookDAO bookdao = new BookDAO();
+            if(bookdao.removeBook(Integer.parseInt(bookId.getText()))){
+                result.setText("Book was successfully deleted");
+            }else {
+                result.setText("Book was not found");
+            }
+            bookId.setText("");
         }
-        bookId.setText("");
+        else{
+            result.setText("Enter Book Id First");
+
+        }
+
     }
 
     public void goback(ActionEvent event) throws IOException {

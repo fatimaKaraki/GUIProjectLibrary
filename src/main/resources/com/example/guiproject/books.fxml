@@ -10,13 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.BooksController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.BooksController">
     <left>
         <fx:include source="menu.fxml" />
     </left>
     <center>
-        <TableView fx:id="booksTable" prefHeight="383.0" prefWidth="303.0" style="-fx-background-color: #2d3447;">
+        <TableView fx:id="booksTable" prefHeight="400.0" prefWidth="665.0">
             <columns>
                 <TableColumn fx:id="BookIdColumn" prefWidth="50.0" text="Book Id" />
                 <TableColumn fx:id="BookNameColumn" prefWidth="250.0" text="Book Name" />
@@ -30,32 +31,42 @@
     <right>
         <VBox>
             <children>
-                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="195.0" style="-fx-background-color: #2d3447;">
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="266.0" style="-fx-background-color: #2d3447;">
                <children>
-                   <VBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="14.0" spacing="10">
-                       <Label text="Search book by:" textFill="WHITE" />
+                    <Label alignment="CENTER" layoutY="-3.0" prefHeight="64.0" prefWidth="266.0" style="-fx-background-color: #a0a2ab;" text="Search Book By" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                   <VBox alignment="CENTER_LEFT" layoutX="48.0" layoutY="109.0" prefHeight="54.0" prefWidth="154.0" spacing="10">
                        <RadioButton fx:id="option1" text="Name" textFill="WHITE" toggleGroup="$Books">
                         <toggleGroup>
                            <ToggleGroup fx:id="Books" />
                         </toggleGroup>
+                        <font>
+                           <Font size="14.0" />
+                        </font>
                        </RadioButton>
-                       <RadioButton fx:id="option2" text="Author" textFill="WHITE" toggleGroup="$Books" />
-                       <RadioButton fx:id="option3" text="Category" textFill="WHITE" toggleGroup="$Books" />
+                       <RadioButton fx:id="option2" text="Author" textFill="WHITE" toggleGroup="$Books">
+                        <font>
+                           <Font size="14.0" />
+                        </font></RadioButton>
+                       <RadioButton fx:id="option3" text="Category" textFill="WHITE" toggleGroup="$Books">
+                        <font>
+                           <Font size="14.0" />
+                        </font></RadioButton>
                    </VBox>
-                  <TextField fx:id="searchInput" layoutX="26.0" layoutY="138.0" prefHeight="25.0" prefWidth="155.0" />
-                  <Button fx:id="bookSearchBtn" layoutX="39.0" layoutY="174.0" mnemonicParsing="false" onAction="#searchBook" style="-fx-background-color: #2196f3;" text="Search" textFill="WHITE" />
-                  <Label fx:id="searchMsg" layoutX="46.0" layoutY="226.0" prefHeight="18.0" prefWidth="99.0" textAlignment="CENTER" />
-                  <Button layoutX="110.0" layoutY="174.0" mnemonicParsing="false" text="Reset" />
+                  <TextField fx:id="searchInput" layoutX="57.0" layoutY="212.0" prefHeight="25.0" prefWidth="155.0" />
+                  <Button fx:id="bookSearchBtn" layoutX="74.0" layoutY="250.0" mnemonicParsing="false" onAction="#searchBook" style="-fx-background-color: #2196f3;" text="Search" textFill="WHITE" />
+                  <Label fx:id="searchMsg" alignment="CENTER" layoutX="52.0" layoutY="283.0" prefHeight="38.0" prefWidth="162.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Button layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#reset" style="-fx-background-color: #FF6347;" text="Reset" textFill="WHITE" />
+                  <Button layoutX="52.0" layoutY="332.0" mnemonicParsing="false" onAction="#editBook" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #2196f3;" text="Edit Books" textFill="WHITE" />
                </children>
                 </AnchorPane>
             </children>
         </VBox>
     </right>
-   <bottom>
-      <AnchorPane prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #2d3447;" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="169.0" layoutY="15.0" mnemonicParsing="false" onAction="#editBook" prefHeight="26.0" prefWidth="262.0" style="-fx-background-color: #2196f3;" text="Edit Books" textFill="WHITE" />
-         </children>
-      </AnchorPane>
-   </bottom>
 </BorderPane>

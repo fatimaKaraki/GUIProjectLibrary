@@ -61,6 +61,10 @@ public class MembersController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        reset();
+    }
+    @FXML
+    public void reset(){
         MemberDAO memberDAO = new MemberDAO();
         try {
             show(memberDAO.getMembers());
@@ -68,7 +72,6 @@ public class MembersController implements Initializable {
             throw new RuntimeException(e);
         }
     }
-
     public void show(ArrayList<Member> givenMembers){
 
               members = FXCollections.observableArrayList(givenMembers);

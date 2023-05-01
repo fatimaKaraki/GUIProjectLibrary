@@ -16,25 +16,25 @@
         <fx:include source="menu.fxml" />
     </left>
 <right>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="348.0" style="-fx-background-color: #2d3447;">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="266.0" style="-fx-background-color: #2d3447;">
           <children>
-               <Label layoutX="11.0" layoutY="14.0" text="Add Member:" textFill="WHITE">
+               <Label alignment="CENTER" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #a0a2ab;" text="Add Member" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="MemberNameInput" layoutX="11.0" layoutY="50.0" promptText="Name" />
-            <Button id="AddMemberBtn" layoutX="11.0" layoutY="166.0" mnemonicParsing="false" onAction="#addMember" style="-fx-background-color: #2196f3;" text="Add Member" />
-            <Label layoutX="15.0" layoutY="233.0" text="Delete Member:" textFill="WHITE">
+            <TextField fx:id="MemberNameInput" layoutX="58.0" layoutY="120.0" promptText="Name" />
+            <Button id="AddMemberBtn" layoutX="58.0" layoutY="236.0" mnemonicParsing="false" onAction="#addMember" style="-fx-background-color: #2196f3;" text="Add Member" textFill="WHITE" />
+            <TextField fx:id="MemberDeleteInput" layoutX="58.0" layoutY="454.0" promptText="Member ID" />
+            <Button id="DeleteMemberBtn" layoutX="83.0" layoutY="490.0" mnemonicParsing="false" onAction="#removeMember" style="-fx-background-color: #FF6347;" text="Delete Member" textFill="WHITE" />
+            <TextField fx:id="MemberPhoneInput" layoutX="58.0" layoutY="158.0" promptText="Phone Number" />
+            <TextField fx:id="MemberEmailInput" layoutX="58.0" layoutY="197.0" promptText="Email" />
+            <Button id="ClearMemberBtn" layoutX="159.0" layoutY="236.0" mnemonicParsing="false" style="-fx-background-color: #FF6347;" text="Clear" textFill="WHITE" />
+            <Label alignment="CENTER" layoutY="334.0" prefHeight="44.0" prefWidth="266.0" style="-fx-background-color: #a0a2ab;" text="Delete Member" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="MemberDeleteInput" layoutX="15.0" layoutY="268.0" promptText="Member ID" />
-            <Button id="DeleteMemberBtn" layoutX="16.0" layoutY="306.0" mnemonicParsing="false" onAction="#removeMember" style="-fx-background-color: #FF6347;" text="Delete Member" />
-            <TextField fx:id="MemberPhoneInput" layoutX="11.0" layoutY="88.0" promptText="Phone Number" />
-            <TextField fx:id="MemberEmailInput" layoutX="11.0" layoutY="127.0" promptText="Email" />
-            <Button id="ClearMemberBtn" layoutX="112.0" layoutY="166.0" mnemonicParsing="false" style="-fx-background-color: #a0a2ab;" text="Clear" />
           </children>
       </AnchorPane>
 </right>
@@ -50,12 +50,13 @@
                               <Font size="15.0" />
                            </font></Label>
                         <TextField fx:id="memberNameSearch" layoutX="136.0" layoutY="15.0" prefHeight="25.0" prefWidth="141.0" promptText="Enter Name or ID" />
-                        <Button layoutX="284.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #2196f3;" text="Search" />
+                        <Button layoutX="284.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #2196f3;" text="Search" textFill="WHITE" />
+                        <Button id="DeleteMemberBtn" fx:id="resetbtn" layoutX="363.0" layoutY="15.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: #FF6347;" text="Reset" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </children>
             </HBox>
-              <TableView fx:id="membersTable" prefHeight="1033.0" prefWidth="262.0" style="-fx-background-color: #2d3447;">
+              <TableView fx:id="membersTable" prefHeight="1033.0" prefWidth="266.0">
                   <columns>
                       <TableColumn fx:id="MemberIdColumn" prefWidth="50.0" text="Id" />
                       <TableColumn fx:id="MemberNameColumn" prefWidth="250.0" text="Name" />

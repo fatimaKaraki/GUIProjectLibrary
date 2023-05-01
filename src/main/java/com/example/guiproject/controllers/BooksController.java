@@ -60,6 +60,11 @@ public class BooksController implements Initializable {
     ObservableList<Book> books;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        reset();
+    }
+    @FXML
+    public void reset(){
+
         BookDAO bookDAO = new BookDAO();
         try {
             show(bookDAO.getBooks());
