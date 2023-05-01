@@ -29,27 +29,30 @@ The database for this project was implemented using PHPMyAdmin and consists of 5
 To handle database operations, DAO (Data Access Object) classes were created for each model. These DAO classes implement all necessary queries for data manipulation, from insertion to deletion and updates. You can find these DAO classes in the DAO package of the project.
 
 ## Some Snippets and Explanation 
-### login page:
 
+### login page:
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(41).png">
 
 ### Home Page:
 
-
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(42).png"> 
 
 ### Books:
-
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(43).png"> 
 
 ### Editing Books:
 
-
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(44).png"> 
 
+### Members:
+
+
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(48).png"> 
+
 ### Rent A Book 
+
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(45).png"> 
 
 ### Library:
@@ -57,10 +60,7 @@ To handle database operations, DAO (Data Access Object) classes were created for
 for Manager
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(46).png"> 
 
-### Members:
 
-
-<img src=""> 
 
 
 
