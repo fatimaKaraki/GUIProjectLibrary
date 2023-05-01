@@ -84,7 +84,7 @@ fatima karaki karakifatima29@gmail.com
 
 Issa Sabeh Issasab2204@gmail.com 
 
-Fadel Bayloon Fadel.bayloun12@gmail.com
+Fadel Bayloun Fadel.bayloun12@gmail.com
 
 Hussien Maatouk Hmaatouk1998@gmail.com 
 
