@@ -30,6 +30,16 @@ To handle database operations, DAO (Data Access Object) classes were created for
 
 ## Some Snippets and Explanation 
 
+<img src="">
+<img src=""> 
+<img src=""> 
+<img src=""> 
+<img src=""> 
+<img src=""> 
+<img src=""> 
+
+
+
 
 
 ## Contributions
@@ -41,7 +51,7 @@ Fadel Bayloon (96879)
 
 Issa Sabeh (100529) 
 
-Hussien Maatouk ()
+Hussien Maatouk (107147)
 
 ## Contact Information 
 For any questions please contact one of the following: 
