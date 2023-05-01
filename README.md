@@ -23,6 +23,14 @@ The following diagramm is a siplification of the last 2 designe patterns
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/UML%20class%20(1).jpeg">
 
+## Data Base 
+The database for this project was implemented using PHPMyAdmin and consists of 5 tables: Books, Members, Rented Books, Staff, and Notifications.
+
+To handle database operations, DAO (Data Access Object) classes were created for each model. These DAO classes implement all necessary queries for data manipulation, from insertion to deletion and updates. You can find these DAO classes in the DAO package of the project.
+
+## Some Snippets and Explanation 
+
+
  
 
 
