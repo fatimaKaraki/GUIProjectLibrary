@@ -19,7 +19,7 @@ Firstly, we utilized the Model-View-Controller (MVC) design pattern to organize 
 Secondly, we implemented the Composite design pattern to illustrate the hierarchy between the managers and librarians. The manager class holds an array list of librarians that they can add to or remove from, creating a structured relationship between the two classes.
 
 Finally, we implemented the Observer design pattern to enable the notification functionality. The Manager is the observable object that sends the notifications, while the Staff members are the observers that receive the notifications. This allowed for the efficient dissemination of important information throughout the system.
-The following diagramm is a siplification of the last 2 designe patterns 
+The following diagramm is a simplification of the last 2 designe patterns 
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/img.png">
 
