@@ -21,7 +21,7 @@ Secondly, I implemented the Composite design pattern to illustrate the hierarchy
 Finally, I implemented the Observer design pattern to enable the notification functionality. The Manager is the observable object that sends the notifications, while the Staff members are the observers that receive the notifications. This allowed for the efficient dissemination of important information throughout the system.
 The following diagramm is a siplification of the last 2 designe patterns 
 
-<img src="https://">
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/UML%20class%20(1).jpeg">
 
  
 
