@@ -32,16 +32,24 @@ To handle database operations, DAO (Data Access Object) classes were created for
 
 
 ## Contributions
-the following project wa designed and implemented by 
+the following project wa designed and implemented by: 
+
 Fatima Karaki (103717) 
+
 Fadel Bayloon (96879)
+
 Issa Sabeh (100529) 
+
 Hussien Maatouk ()
 
 ## Contact Information 
-For any questions please contact one of the following 
+For any questions please contact one of the following: 
+
 fatima karaki karakifatima29@gmail.com 
+
 Issa Sabeh Issasab2204@gmail.com 
+
 Fadel Bayloon Fadel.bayloun12@gmail.com
+
 
 
