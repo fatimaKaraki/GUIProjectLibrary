@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class loginController {
+public class LoginController {
 
     @FXML
     public Button login;
@@ -54,9 +54,15 @@ public class loginController {
             app.home();
 
         }
+        else{
+            test.setText("Wrong credentials!");
+        }
     }
 
     public void clear(){
+        username.setText("");
+        password.setText("");
+
 
     }
 }
