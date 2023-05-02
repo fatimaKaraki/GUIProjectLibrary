@@ -11,6 +11,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -27,6 +30,7 @@ public class RentBookController {
     public Label warning;
     @FXML
     public Button rentButton1;
+
 
     @FXML
     public void rentButton(ActionEvent actionEvent) throws SQLException {
