@@ -14,12 +14,12 @@ The library contains a notification feature, which allows managers to send notif
 
 The project was designed to incorporate three distinct design patterns.
 
-Firstly, I utilized the Model-View-Controller (MVC) design pattern to organize the architecture of the entire system. This pattern allowed for the seamless integration of the front-end FXML views and the back-end Model that contains the library's database instances, through the Model classes.
+Firstly, we utilized the Model-View-Controller (MVC) design pattern to organize the architecture of the entire system. This pattern allowed for the seamless integration of the front-end FXML views and the back-end Model that contains the library's database instances, through the Model classes.
 
-Secondly, I implemented the Composite design pattern to illustrate the hierarchy between the managers and librarians. The manager class holds an array list of librarians that they can add to or remove from, creating a structured relationship between the two classes.
+Secondly, we implemented the Composite design pattern to illustrate the hierarchy between the managers and librarians. The manager class holds an array list of librarians that they can add to or remove from, creating a structured relationship between the two classes.
 
-Finally, I implemented the Observer design pattern to enable the notification functionality. The Manager is the observable object that sends the notifications, while the Staff members are the observers that receive the notifications. This allowed for the efficient dissemination of important information throughout the system.
-The following diagramm is a siplification of the last 2 designe patterns 
+Finally, we implemented the Observer design pattern to enable the notification functionality. The Manager is the observable object that sends the notifications, while the Staff members are the observers that receive the notifications. This allowed for the efficient dissemination of important information throughout the system.
+The following diagramm is a simplification of the last 2 designe patterns 
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/img.png">
 
@@ -29,27 +29,30 @@ The database for this project was implemented using PHPMyAdmin and consists of 5
 To handle database operations, DAO (Data Access Object) classes were created for each model. These DAO classes implement all necessary queries for data manipulation, from insertion to deletion and updates. You can find these DAO classes in the DAO package of the project.
 
 ## Some Snippets and Explanation 
-### login page:
 
+### login page:
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(41).png">
 
 ### Home Page:
 
-
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(42).png"> 
 
 ### Books:
-
 
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(43).png"> 
 
 ### Editing Books:
 
-
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(44).png"> 
 
+### Members:
+
+
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(48).png"> 
+
 ### Rent A Book 
+
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(45).png"> 
 
 ### Library:
@@ -57,10 +60,7 @@ To handle database operations, DAO (Data Access Object) classes were created for
 for Manager
 <img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(46).png"> 
 
-### Members:
 
-
-<img src=""> 
 
 
 
@@ -84,7 +84,7 @@ fatima karaki karakifatima29@gmail.com
 
 Issa Sabeh Issasab2204@gmail.com 
 
-Fadel Bayloon Fadel.bayloun12@gmail.com
+Fadel Bayloun Fadel.bayloun12@gmail.com
 
 Hussien Maatouk Hmaatouk1998@gmail.com 
 
