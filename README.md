@@ -40,7 +40,7 @@ To handle database operations, DAO (Data Access Object) classes were created for
 
 ### Books:
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(43).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(50).png?raw=true"> 
 
 ### Editing Books:
 
@@ -49,16 +49,16 @@ To handle database operations, DAO (Data Access Object) classes were created for
 ### Members:
 
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(48).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(51).png?raw=true"> 
 
 ### Rent A Book 
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(45).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(52).png?raw=true"> 
 
 ### Library:
 
 for Manager
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(46).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(53).png?raw=true"> 
 
 
 
