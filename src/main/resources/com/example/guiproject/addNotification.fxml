@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="571.0" prefWidth="765.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.AddNotificationController">
+<AnchorPane prefHeight="571.0" prefWidth="765.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiproject.controllers.AddNotificationController">
    <children>
       <Button fx:id="sendNotification" layoutX="35.0" layoutY="367.0" mnemonicParsing="false" onAction="#sendNotification" style="-fx-background-color: #2196f3;" text="Send Message" textFill="WHITE" />
       <Button fx:id="clearMsg" layoutX="146.0" layoutY="367.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: #FF6347;" text="Clear" textFill="WHITE" />
@@ -35,21 +30,21 @@
          </font>
       </Label>
       <Button fx:id="makeManagerBtn" layoutX="298.0" layoutY="278.0" mnemonicParsing="false" onAction="#makeManager" style="-fx-background-color: #2196f3;" text="Submit" textFill="WHITE" />
-      <TextField fx:id="makeManagerInput" layoutX="298.0" layoutY="241.0" promptText="Staff ID" />
+      <TextField fx:id="makeManagerInput" layoutX="298.0" layoutY="241.0" promptText="Staff  Name" />
       <Label layoutX="298.0" layoutY="209.0" text="Make Manager:" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <Button fx:id="removeStaffBtn" layoutX="298.0" layoutY="495.0" mnemonicParsing="false" onAction="#removeStaff" style="-fx-background-color: #FF6347;" text="Remove" textFill="WHITE" />
-      <TextField fx:id="removeStaffInput" layoutX="298.0" layoutY="458.0" promptText="Staff ID" />
+      <TextField fx:id="removeStaffInput" layoutX="298.0" layoutY="458.0" promptText="Staff  Name" />
       <Label layoutX="298.0" layoutY="426.0" text="Remove Staff:" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <Button fx:id="makeLibrarianBtn" layoutX="298.0" layoutY="393.0" mnemonicParsing="false" onAction="#makeLibrarian" style="-fx-background-color: #2196f3;" text="Submit" textFill="WHITE" />
-      <TextField fx:id="makeLibrarianInput" layoutX="298.0" layoutY="356.0" promptText="Staff ID" />
+      <TextField fx:id="makeLibrarianInput" layoutX="298.0" layoutY="356.0" promptText="Staff Name " />
       <Label layoutX="298.0" layoutY="324.0" text="Make Librarian:" textFill="WHITE">
          <font>
             <Font size="17.0" />
