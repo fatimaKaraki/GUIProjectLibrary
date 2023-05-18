@@ -32,11 +32,11 @@ To handle database operations, DAO (Data Access Object) classes were created for
 
 ### login page:
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(41).png">
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(54).png?raw=true">
 
 ### Home Page:
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(42).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(49).png?raw=true"> 
 
 ### Books:
 
