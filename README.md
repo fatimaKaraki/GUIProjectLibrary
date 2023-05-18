@@ -44,7 +44,7 @@ To handle database operations, DAO (Data Access Object) classes were created for
 
 ### Editing Books:
 
-<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(44).png"> 
+<img src="https://github.com/fatimaKaraki/GUIProjectLibrary/blob/master/snippets/Screenshot%20(55).png?raw=true"> 
 
 ### Members:
 
